@@ -87,6 +87,7 @@ func (this *ClientDis) DelServiceList(key string) {
 	log.Println("del data key:", key)
 }
 
+//SerList2Array :serverList就是实时的可以提供某个服务host列表，从中选出一个host给客户端调用即可
 func (this *ClientDis) SerList2Array() []string {
 	this.lock.Lock()
 	defer this.lock.Unlock()
